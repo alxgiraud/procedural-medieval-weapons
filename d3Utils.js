@@ -49,6 +49,17 @@ var d3Utils = (function () {
 
         getCurveBasis: function () {
             return d3.line()
+                .curve(d3.curveBasis)
+                .x(function (d) {
+                    return d.x;
+                })
+                .y(function (d) {
+                    return d.y;
+                });
+        },
+
+        getCurveBasisClosed: function () {
+            return d3.line()
                 .curve(d3.curveBasisClosed)
                 .x(function (d) {
                     return d.x;

@@ -273,7 +273,7 @@ var crossbow = (function () {
 
             svg.append('path')
                 .datum(bow)
-                .attr('d', d3Utils.getCurveBasis())
+                .attr('d', d3Utils.getCurveBasisClosed())
                 .style('fill', '#776B53')
                 .style('stroke', '#3B291E')
                 .style('stroke-width', '3px');
